@@ -6,7 +6,7 @@ public class simple_banking {
     public simple_banking() {
         this.balance = 0.0;
     }
-
+    // function to make a deposit
     public void deposit(double amount) {
         if (amount > 0) {
             balance += amount;
@@ -15,7 +15,7 @@ public class simple_banking {
             System.out.println("Deposit amount must be positive.");
         }
     }
-
+    //function to make a withdraw
     public void withdraw(double amount) {
         if (amount > 0 && amount <= balance) {
             balance -= amount;
@@ -26,16 +26,16 @@ public class simple_banking {
             System.out.println("Withdrawal amount must be positive.");
         }
     }
-
+    //to check balance
     public void checkBalance() {
         System.out.printf("Current balance: %.2f%n", balance);
     }
-
+    //body part of the program
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         simple_banking bankApp = new simple_banking();
         int choice;
-
+        //for the user to select what he wants to do 
         do {
             System.out.println("Welcome to Simple Banking App");
             System.out.println("1. Deposit");
